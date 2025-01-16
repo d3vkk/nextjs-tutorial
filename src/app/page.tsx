@@ -1,5 +1,6 @@
 import Image from "next/image";
 import { Greet } from "./components/greet";
+import { Counter } from "./components/counter";
 
 export default function Home() {
   return (
@@ -25,6 +26,7 @@ export default function Home() {
         </ol>
 
         <Greet></Greet>
+        <Counter></Counter>
 
         <div className="flex gap-4 items-center flex-col sm:flex-row">
           <a
