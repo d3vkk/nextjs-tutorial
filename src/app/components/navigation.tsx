@@ -1,15 +1,33 @@
+"use client";
+
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 
 export const Navigation = () => {
+  const pathName = usePathname();
+
   return (
     <nav>
-      <Link className="mr-4 text-blue-500" href="/">
+      <Link
+        className={pathName == "/" ? "font-bold mr-4" : "text-blue-500 mr-4"}
+        href="/"
+      >
         Home
       </Link>
-      <Link className="mr-4 text-blue-500" href="/about">
+      <Link
+        className={
+          pathName == "/about" ? "font-bold mr-4" : "text-blue-500 mr-4"
+        }
+        href="/about"
+      >
         About
       </Link>
-      <Link className="mr-4 text-blue-500" href="/products/1">
+      <Link
+        className={
+          pathName == "/product/1" ? "font-bold mr-4" : "text-blue-500 mr-4"
+        }
+        href="/product/1"
+      >
         Product 1
       </Link>
     </nav>
